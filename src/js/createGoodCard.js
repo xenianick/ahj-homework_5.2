@@ -31,7 +31,8 @@ export default function createGoodCard(good, goodsArray) {
     const priceInput = popup.querySelector('.good-price-field');
     const resetBtn = popup.querySelector('.good-reset-btn');
     nameInput.value = good.name;
-    priceInput.value = good.price;
+    const uglyPrice = good.price.replace(/\s+/g, '');
+    priceInput.value = uglyPrice;
     // по кнопке сабмита проверяем форму
     addingForm.addEventListener('submit', (event) => {
       event.preventDefault();

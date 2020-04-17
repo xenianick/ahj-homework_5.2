@@ -10,7 +10,7 @@ function checkNameValidity(name) {
 
 function checkPriceValidity(price) {
   const priceNumber = parseInt(price, 10);
-  const priceIsNumber = /^[0-9 ]+$/.test(price);
+  const priceIsNumber = /^[0-9]+$/.test(price);
   let isValidPrice = false;
   if (!priceIsNumber || priceNumber <= 0) {
     isValidPrice = false;

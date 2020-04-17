@@ -1,16 +1,16 @@
 import puppetteer from 'puppeteer';
 
-jest.setTimeout(50000); // default puppeteer timeout
+jest.setTimeout(90000); // default puppeteer timeout
 
 describe('validator form', () => {
   let browser = null;
   let page = null;
-  const baseUrl = 'http://localhost:9000'; // 'https://xenianick.github.io/ahj-homework_5.2/';
+  const baseUrl = 'https://xenianick.github.io/ahj-homework_5.2/';
   beforeAll(async () => {
     browser = await puppetteer.launch({
-      headless: false, // show gui
-      slowMo: 100,
-      devtools: true, // show devTools
+      // headless: false, // show gui
+      // slowMo: 100,
+      // devtools: true, // show devTools
     });
     page = await browser.newPage();
   });
